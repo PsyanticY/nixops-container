@@ -127,7 +127,7 @@ class ContainerState(MachineState):
             self.log("building initial configuration...")
 
             expr = " ".join([
-                '{ imports = [ <nixops/container-base.nix> ];',
+                '{ imports = [ <container-base.nix> ];',
                 '  boot.isContainer = true;',
                 '  networking.hostName = "{0}";'.format(self.name),
                 '  users.extraUsers.root.openssh.authorizedKeys.keys = [ "{0}" ];'.format(self.client_public_key),
